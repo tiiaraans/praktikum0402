@@ -8,7 +8,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
-        return view('welcome', compact('post'));
+        $posts = Post::paginate(5);
+        return view('welcome', compact('posts'));
     }
 }

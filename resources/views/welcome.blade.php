@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        @forelse($posts as @post)
+        @forelse($posts as $post)
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ $post->title }}</div>
@@ -16,7 +16,7 @@
         @empty
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ $post->title }}</div>
+                <div class="card-header">Post</div>
 
                 <div class="card-body">
                     Belu ada posts
